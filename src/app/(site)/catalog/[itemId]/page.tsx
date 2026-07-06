@@ -167,14 +167,14 @@ export default async function ItemDetailPage({ params }: PageProps) {
             <RequestQuoteButton itemId={item._id} itemTitle={item.title} />
           </div>
 
-          {item.documents.length > 0 || item.retailPrice != null ? (
+          {/* {item.documents.length > 0 || item.retailPrice != null ? (
             <div className="mt-3">
               <PdfDownloadButton
                 href={`/api/pdf/item/${item._id}`}
                 itemId={item._id}
               />
             </div>
-          ) : null}
+          ) : null} */}
 
           {item.warranty ? (
             <p className="mt-4 text-sm text-muted-foreground">
