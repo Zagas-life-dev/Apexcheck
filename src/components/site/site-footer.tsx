@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPinIcon, PhoneIcon, MailIcon, ShieldCheckIcon } from "lucide-react";
+import { PhoneIcon, MailIcon } from "lucide-react";
 import { site } from "@/lib/site";
 import { Logo } from "@/components/logo";
 
@@ -25,10 +25,6 @@ export function SiteFooter() {
         <div>
           <h3 className="text-sm font-semibold">Contact</h3>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-            <li className="flex items-start gap-2">
-              <MapPinIcon className="mt-0.5 size-4 shrink-0" />
-              <span>{site.contact.address}</span>
-            </li>
             <li className="flex items-center gap-2">
               <PhoneIcon className="size-4 shrink-0" />
               <a href={`tel:${site.contact.phone}`} className="hover:text-foreground">
@@ -58,14 +54,9 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold">Trust & compliance</h3>
+          <h3 className="text-sm font-semibold">Payments & delivery</h3>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-            <li className="flex items-start gap-2">
-              <ShieldCheckIcon className="mt-0.5 size-4 shrink-0 text-primary" />
-              <span>{site.compliance.fdaRegistration}</span>
-            </li>
-            <li>{site.compliance.businessRegistration}</li>
-            <li className="pt-1 text-xs">Payments: {site.paymentMethods.join(", ")}</li>
+            <li>Payments: {site.paymentMethods.join(", ")}</li>
             <li className="text-xs">{site.deliveryCoverage}</li>
           </ul>
         </div>

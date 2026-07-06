@@ -9,7 +9,7 @@ import type { SerializedItem } from "@/lib/types";
 
 export function ProductCard({
   item,
-  currency = "GHS",
+  currency = "NGN",
 }: {
   item: SerializedItem;
   currency?: Currency;

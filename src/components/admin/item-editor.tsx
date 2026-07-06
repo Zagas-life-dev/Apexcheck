@@ -451,21 +451,10 @@ export function ItemEditor({ item }: { item?: SerializedItem }) {
 
       <Section
         title="Pricing"
-        description="Retail (B2C) price and optional B2B bulk tiers, in GHS and NGN. Leave NGN blank if not yet known — buyers in Nigeria will see “Contact us for pricing” until it's filled in."
+        description="Retail (B2C) price and optional B2B bulk tiers, in NGN and GHS. Leave GHS blank if not yet known — buyers detected in Ghana will see “Contact us for pricing” until it's filled in."
       >
         <div className="grid gap-4">
           <div className="grid max-w-md gap-4 sm:grid-cols-2">
-            <div className="space-y-1.5">
-              <Label htmlFor="retailPrice">Retail price (GHS)</Label>
-              <Input
-                id="retailPrice"
-                type="number"
-                min="0"
-                value={state.retailPrice}
-                onChange={(e) => set("retailPrice", e.target.value)}
-                placeholder="e.g. 690"
-              />
-            </div>
             <div className="space-y-1.5">
               <Label htmlFor="retailPriceNGN">Retail price (NGN)</Label>
               <Input
@@ -475,6 +464,17 @@ export function ItemEditor({ item }: { item?: SerializedItem }) {
                 value={state.retailPriceNGN}
                 onChange={(e) => set("retailPriceNGN", e.target.value)}
                 placeholder="e.g. 850000"
+              />
+            </div>
+            <div className="space-y-1.5">
+              <Label htmlFor="retailPrice">Retail price (GHS)</Label>
+              <Input
+                id="retailPrice"
+                type="number"
+                min="0"
+                value={state.retailPrice}
+                onChange={(e) => set("retailPrice", e.target.value)}
+                placeholder="e.g. 690"
               />
             </div>
           </div>
@@ -497,16 +497,16 @@ export function ItemEditor({ item }: { item?: SerializedItem }) {
                   <Input
                     type="number"
                     min="0"
-                    placeholder="Unit price (GHS)"
-                    value={row.unitPrice}
-                    onChange={(e) => update({ ...row, unitPrice: e.target.value })}
+                    placeholder="Unit price (NGN)"
+                    value={row.unitPriceNGN}
+                    onChange={(e) => update({ ...row, unitPriceNGN: e.target.value })}
                   />
                   <Input
                     type="number"
                     min="0"
-                    placeholder="Unit price (NGN)"
-                    value={row.unitPriceNGN}
-                    onChange={(e) => update({ ...row, unitPriceNGN: e.target.value })}
+                    placeholder="Unit price (GHS)"
+                    value={row.unitPrice}
+                    onChange={(e) => update({ ...row, unitPrice: e.target.value })}
                   />
                 </>
               )}

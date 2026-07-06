@@ -114,7 +114,7 @@ export default async function LandingPage() {
             <div>
               <div className="font-medium">Certified & compliant</div>
               <p className="text-sm text-muted-foreground">
-                CE-marked devices with Ghana FDA registration where applicable.
+                CE-marked devices, verified before they&apos;re listed.
               </p>
             </div>
           </div>

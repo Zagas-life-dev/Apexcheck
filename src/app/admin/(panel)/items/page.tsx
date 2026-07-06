@@ -88,10 +88,10 @@ export default async function ItemsPage() {
                     {categoryLabel(item.category)}
                   </td>
                   <td className="px-4 py-3 tabular-nums">
-                    <div>{formatCurrency(item.retailPrice)}</div>
-                    {item.retailPriceNGN != null ? (
+                    <div>{formatCurrency(item.retailPriceNGN, "NGN")}</div>
+                    {item.retailPrice != null ? (
                       <div className="text-xs text-muted-foreground">
-                        {formatCurrency(item.retailPriceNGN, "NGN")}
+                        {formatCurrency(item.retailPrice, "GHS")}
                       </div>
                     ) : null}
                   </td>

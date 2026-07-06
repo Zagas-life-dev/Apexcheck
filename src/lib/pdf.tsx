@@ -107,7 +107,6 @@ function Header() {
 function Footer() {
   return (
     <View style={styles.footer} fixed>
-      <Text>{site.compliance.fdaRegistration}</Text>
       <Text>Prices subject to change. Generated {new Date().toLocaleDateString("en-GB")}</Text>
     </View>
   );

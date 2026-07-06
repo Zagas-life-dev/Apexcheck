@@ -61,7 +61,7 @@ export function formatDateTime(value?: string | Date | null): string {
 // currency. Tiers missing a price in that currency are excluded (no fallback).
 export function lowestTierPrice(
   tiers?: PricingTier[],
-  currency: Currency = "GHS"
+  currency: Currency = "NGN"
 ): number | undefined {
   if (!tiers || tiers.length === 0) return undefined;
   const values = tiers

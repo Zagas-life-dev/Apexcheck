@@ -8,15 +8,15 @@ export default function ImportPolicyPage() {
   return (
     <LegalPage title="Import Policy">
       <p>
-        {site.name} sources and imports medical devices and supplies in accordance with the
-        requirements of the Ghana Food and Drugs Authority (FDA) and applicable international
-        standards. This policy explains how imported products are handled.
+        {site.name} sources and imports medical devices and supplies in accordance with
+        applicable national regulatory requirements and international standards. This policy
+        explains how imported products are handled.
       </p>
       <h2>Regulatory compliance</h2>
       <p>
-        Where required, imported devices are registered with the Ghana FDA and carry
-        appropriate conformity marks (e.g. CE marking) and manufacturer documentation.
-        Registration numbers are shown on product pages where available.
+        Where required, imported devices carry appropriate conformity marks (e.g. CE marking)
+        and manufacturer documentation, and are registered with the relevant regulatory
+        authorities. Registration numbers are shown on product pages where available.
       </p>
       <h2>Import-on-request items</h2>
       <ul>

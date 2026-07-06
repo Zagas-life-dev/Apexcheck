@@ -8,32 +8,29 @@ export const site = {
     process.env.NEXT_PUBLIC_BUSINESS_TAGLINE ||
     "Certified medical devices & supplies for clinics, hospitals, and home care.",
   url: (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, ""),
-  currency: "GHS",
+  // Home market is Nigeria (NGN); GHS is shown only to visitors detected in
+  // Ghana — see resolveVisitorCurrency() in @/lib/currency.
+  currency: "NGN",
 
   // Digits only, international format without "+" — used to build wa.me links.
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "233200000000",
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "234200000000",
 
+  // Online-only business — no physical address/showroom to surface.
   contact: {
-    phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "+233 20 000 0000",
+    phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "+234 20 000 0000",
     email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "sales@apexcheck.local",
-    address:
-      process.env.NEXT_PUBLIC_BUSINESS_ADDRESS ||
-      "Showroom address, Accra, Ghana",
   },
 
   // Trust & compliance details surfaced on the site (placeholder until verified).
   compliance: {
-    fdaRegistration: process.env.NEXT_PUBLIC_FDA_REGISTRATION || "Ghana FDA Reg. — pending",
-    businessRegistration:
-      process.env.NEXT_PUBLIC_BUSINESS_REGISTRATION || "Business Reg. — pending",
     yearsInOperation: process.env.NEXT_PUBLIC_YEARS_IN_OPERATION || "",
   },
 
   // Free-form; shown on trust/policy pages.
-  paymentMethods: ["Bank transfer", "MTN MoMo", "Cash on delivery"],
+  paymentMethods: ["Bank transfer", "Card payment", "Cash on delivery"],
   deliveryCoverage:
     process.env.NEXT_PUBLIC_DELIVERY_COVERAGE ||
-    "Nationwide delivery across Ghana. International supply on request.",
+    "Nationwide delivery across Nigeria. International supply on request.",
 };
 
 export function waLink(message: string, phone: string = site.whatsappNumber): string {
